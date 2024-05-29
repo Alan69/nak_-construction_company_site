@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ftco-animate">
+        <h2 class="mb-3">{{ blog.name }}</h2>
+        <p>{{ blog.date }}</p> <p>{{ blog.author }}</p>
+        <p>
+          <img src="{{ blog.img.url }}" alt="" class="img-fluid">
+        </p>
+        <p>{{ blog.short_description }}</p>
+        <h2 class="mb-3 mt-5"></h2>
+        <p>{{ blog.full_description }}</p>
+      </div>
+    </div>
+  </div>
+        
+</section> <!-- .section -->
+
+
+{% endblock content %}

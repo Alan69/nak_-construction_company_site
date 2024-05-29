@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<section class="ftco-section" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 d-flex align-items-stretch">
+					<div class="about-wrap img w-100" style="background-image: url({% static 'images/about.jpg' %});">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-crane"></span></div>
+					</div>
+				</div>
+				<div class="col-md-6 py-5 pl-md-5">
+					<div class="row justify-content-center mb-4 pt-md-4">
+						<div class="col-md-12 heading-section ftco-animate">
+							<span class="subheading">Добро пожаловать</span>
+							<h2 class="mb-4">Строительная компания Nak</h2>
+							<div class="d-flex about">
+								<div class="icon"><span class="flaticon-hammer"></span></div>
+								<h3>Мы работаем в этом бизнесе с 1975 года и предоставляем лучшие промышленные услуги.</h3>
+							</div>
+							<p>Строительная компания NAK — это команда профессионалов, специализирующаяся на создании качественных и современных объектов. Мы предлагаем широкий спектр строительных услуг, от проектирования до завершения строительства, с акцентом на инновации и надежность. Наши проекты отличаются высоким стандартом исполнения, соблюдением сроков и индивидуальным подходом к каждому клиенту.</p>
+							<div class="d-flex video-image align-items-center mt-md-4">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter">
+		<div class="img image-overlay" style="background-image: url({% static 'images/about-3.jpg' %});"></div>
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-md-6 py-5 bg-secondary aside-stretch">
+					<div class="heading-section heading-section-white p-4 pl-md-0 py-md-5 pr-md-5">
+						<span class="subheading">Строительная компаная Nak</span>
+						<h2 class="mb-4">Лучший поставщик промышленных услуг</h2>
+						<h4>Строительная компания NAK — это команда профессионалов, специализирующаяся на создании качественных и современных объектов.</h4>
+						<p>Мы предлагаем широкий спектр строительных и промышленных услуг, от проектирования до завершения строительства, с акцентом на инновации и надежность. Как лучший поставщик промышленных услуг, наши проекты отличаются высоким стандартом исполнения, соблюдением сроков и индивидуальным подходом к каждому клиенту.</p>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-items-center">
+					<div class="row">
+						<div class="col-md-12 d-flex counter-wrap ftco-animate">
+							<div class="block-18 bg-primary d-flex align-items-center justify-content-between">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-engineer"></span></div>
+								<div class="text">
+									<strong class="number" data-number="48000">0</strong>
+									<span>Проектов</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 d-flex counter-wrap ftco-animate">
+							<div class="block-18 d-flex align-items-center justify-content-between">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-worker-1"></span></div>
+								<div class="text">
+									<strong class="number" data-number="54900">0</strong>
+									<span>Счастливых клиентов</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock content %}

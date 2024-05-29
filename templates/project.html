@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 text-center heading-section ftco-animate">
+					<span class="subheading">Наши глобальные проекты</span>
+					<h2 class="mb-4">Проекты</h2>
+				</div>
+			</div>
+			<div class="row">
+				{% for p in project %}
+				<div class="col-md-4">
+					<div class="project">
+						<a href="{{ p.img.url }}" class="img image-popup d-flex align-items-center" style="background-image: url({{ p.img.url }});">
+							<div class="icon d-flex align-items-center justify-content-center mb-5"><span class="fa fa-plus"></span></div>
+						</a>
+						<div class="text">
+							<span class="subheading">{{ p.name }}</span>
+							<h3>{{ p.full_description }}</h3>
+							<p><span class="fa fa-map-marker mr-1"></span> {{ p.address }}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+{% endblock content %}

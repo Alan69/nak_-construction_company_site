@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-lg-6 ftco-animate">
+					<div class="mt-5">
+						<h1 class="mb-4">Мы строим <br>будущее</h1>
+						<p class="mb-4">Строительная компания NAK — ваш надежный партнер в создании комфортных и современных пространств. Мы строим будущее, в котором хочется жить.</p>
+						{% comment %} <p><a href="#" class="btn btn-primary">Our Services</a> <a href="#" class="btn btn-white" data-toggle="modal" data-target="#exampleModalCenter">Request A Quote</a></p> {% endcomment %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2">
+		<div class="container">
+			<div class="row no-gutters d-flex">
+				<div class="col-lg-4 d-flex align-self-stretch ftco-animate">
+					<div class="media block-6 services d-flex">
+						<div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-engineer-1"></span></div>
+						<div class="media-body pl-4">
+							<h3 class="heading mb-3">Качественное строительство</h3>
+							<p>Качественное строительство — это гарантия долговечности и безопасности возводимых объектов.</p>
+						</div>
+					</div>      
+				</div>
+				<div class="col-lg-4 d-flex align-self-stretch ftco-animate">
+					<div class="media block-6 services services-2 d-flex">
+						<div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-worker-1"></span></div>
+						<div class="media-body pl-4">
+							<h3 class="heading mb-3">Профессиональная ответственность</h3>
+							<p> Мы соблюдаем высокие стандарты на каждом этапе работ, используя современные технологии и материалы.</p>
+						</div>
+					</div>      
+				</div>
+				<div class="col-lg-4 d-flex align-self-stretch ftco-animate">
+					<div class="media block-6 services d-flex">
+						<div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-engineer"></span></div>
+						<div class="media-body pl-4">
+							<h3 class="heading mb-3">Посвящается нашим клиентам</h3>
+							<p>Наши клиенты вдохновляют нас на создание надежных и красивых сооружений, воплощая мечты в реальность.</p>
+						</div>
+					</div>      
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 d-flex align-items-stretch">
+					<div class="about-wrap img w-100" style="background-image: url({% static 'images/about.jpg' %});">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-crane"></span></div>
+					</div>
+				</div>
+				<div class="col-md-6 py-5 pl-md-5">
+					<div class="row justify-content-center mb-4 pt-md-4">
+						<div class="col-md-12 heading-section ftco-animate">
+							<span class="subheading">Добро пожаловать</span>
+							<h2 class="mb-4">Строительная компания Nak</h2>
+							<div class="d-flex about">
+								<div class="icon"><span class="flaticon-hammer"></span></div>
+								<h3>Мы работаем в этом бизнесе с 1975 года и предоставляем лучшие промышленные услуги.</h3>
+							</div>
+							<p>Строительная компания NAK — это команда профессионалов, специализирующаяся на создании качественных и современных объектов. Мы предлагаем широкий спектр строительных услуг, от проектирования до завершения строительства, с акцентом на инновации и надежность. Наши проекты отличаются высоким стандартом исполнения, соблюдением сроков и индивидуальным подходом к каждому клиенту.</p>
+							<div class="d-flex video-image align-items-center mt-md-4">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-half-light">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<span class="subheading">Сервисы</span>
+					<h2 class="mb-4">Мы предлогаем вам...</h2>
+				</div>
+			</div>
+			<div class="row">
+				{% for s in service %}
+				<div class="col-md-4">
+					<div class="services-wrap ftco-animate">
+						<div class="img" style="background-image: url({% static 'images/services-1.jpg' %});"></div>
+						<div class="text">
+							<div class="icon"><span class="flaticon-architect"></span></div>
+							<h2>{{ s.name }}</h2>
+							<p>{{ s.short_description }}</p>
+							<a href="{% url 'service' %}" class="btn-custom">Больше</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter">
+		<div class="img image-overlay" style="background-image: url({% static 'images/about-3.jpg' %});"></div>
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-md-6 py-5 bg-secondary aside-stretch">
+					<div class="heading-section heading-section-white p-4 pl-md-0 py-md-5 pr-md-5">
+						<span class="subheading">Строительная компаная Nak</span>
+						<h2 class="mb-4">Лучший поставщик промышленных услуг</h2>
+						<h4>Строительная компания NAK — это команда профессионалов, специализирующаяся на создании качественных и современных объектов.</h4>
+						<p>Мы предлагаем широкий спектр строительных и промышленных услуг, от проектирования до завершения строительства, с акцентом на инновации и надежность. Как лучший поставщик промышленных услуг, наши проекты отличаются высоким стандартом исполнения, соблюдением сроков и индивидуальным подходом к каждому клиенту.</p>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-items-center">
+					<div class="row">
+						<div class="col-md-12 d-flex counter-wrap ftco-animate">
+							<div class="block-18 bg-primary d-flex align-items-center justify-content-between">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-engineer"></span></div>
+								<div class="text">
+									<strong class="number" data-number="48000">0</strong>
+									<span>Проектов</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 d-flex counter-wrap ftco-animate">
+							<div class="block-18 d-flex align-items-center justify-content-between">
+								<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-worker-1"></span></div>
+								<div class="text">
+									<strong class="number" data-number="54900">0</strong>
+									<span>Счастливых клиентов</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 text-center heading-section ftco-animate">
+					<span class="subheading">Наши глобальные проекты</span>
+					<h2 class="mb-4">Проекты</h2>
+				</div>
+			</div>
+			<div class="row">
+				{% for p in project %}
+				<div class="col-md-4">
+					<div class="project">
+						<a href="{{ p.img.url }}" class="img image-popup d-flex align-items-center" style="background-image: url({{ p.img.url }});">
+							<div class="icon d-flex align-items-center justify-content-center mb-5"><span class="fa fa-plus"></span></div>
+						</a>
+						<div class="text">
+							<span class="subheading">{{ p.name }}</span>
+							{% comment %} <h3>{{ p.full_description }}</h3> {% endcomment %}
+							<p><span class="fa fa-map-marker mr-1"></span> {{ p.address }}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<span class="subheading">Наш блог</span>
+					<h2 class="mb-4">Последнее</h2>
+				</div>
+			</div>
+			<div class="row d-flex">
+				{% for b in blog %}
+				<div class="col-lg-4 ftco-animate">
+					<div class="blog-entry">
+						<a href="blog-single.html" class="block-20" style="background-image: url({{ b.img.url }});">
+						</a>
+						<div class="text d-block">
+							<div class="meta">
+								<p>
+									<a href="#"><span class="fa fa-calendar mr-2"></span>{{ b.date }}</a>
+									<a href="#"><span class="fa fa-user mr-2"></span>{{ b.author }}</a>
+									{% comment %} <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a> {% endcomment %}
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">{{ b.short_description }}</a></h3>
+							<p><a href="{% url 'blog' %}" class="btn btn-secondary py-2 px-3">Больше</a></p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	</section>
+
+	
+
+{% endblock content %}
